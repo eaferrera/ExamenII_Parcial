@@ -12,7 +12,6 @@ namespace Datos.Entidades
         public string Descripcion { get; set; }
         public decimal Precio { get; set; }
         public int Existencia { get; set; }
-        public byte[] Imagen { get; set; }
 
         //Constructor vacío
         public Producto()
@@ -25,7 +24,6 @@ namespace Datos.Entidades
             Descripcion = descripcion;
             Precio = precio;
             Existencia = existencia;
-            Imagen = imagen;
         }
     }
 }
