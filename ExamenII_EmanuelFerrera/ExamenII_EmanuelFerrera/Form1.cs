@@ -47,12 +47,15 @@ namespace ExamenII_EmanuelFerrera
                 ClaveTextBox.Focus();
                 return;
             }
+
+            FrmMenu frmMenu = new FrmMenu();
+            frmMenu.Show();
+            this.Hide();
         }
 
         private void CancelarButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
     }
 }

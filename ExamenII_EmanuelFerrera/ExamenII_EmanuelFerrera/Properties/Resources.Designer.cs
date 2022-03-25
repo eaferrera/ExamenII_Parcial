@@ -113,6 +113,16 @@ namespace ExamenII_EmanuelFerrera.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Pedidos {
+            get {
+                object obj = ResourceManager.GetObject("Pedidos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Producto {
             get {
                 object obj = ResourceManager.GetObject("Producto", resourceCulture);

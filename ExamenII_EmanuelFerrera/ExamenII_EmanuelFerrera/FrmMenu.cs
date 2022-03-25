@@ -15,5 +15,19 @@ namespace ExamenII_EmanuelFerrera
             InitializeComponent();
         }
 
+        FrmProductos frmProductos= null;
+        private void ListaProductoToolStripButton_Click(object sender, EventArgs e)
+        {
+            if (frmProductos == null)
+            {
+                frmProductos = new FrmProductos();
+                frmProductos.MdiParent = this;
+                frmProductos.Show();
+            }
+            else
+            {
+                frmProductos.Activate();
+            }
+        }
     }
 }

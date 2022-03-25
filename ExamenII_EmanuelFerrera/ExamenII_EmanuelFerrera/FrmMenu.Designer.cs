@@ -33,15 +33,15 @@ namespace ExamenII_EmanuelFerrera
         {
             this.ribbonControlAdv1 = new Syncfusion.Windows.Forms.Tools.RibbonControlAdv();
             this.toolStripTabItem1 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
-            this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.ProductosToolStripEx = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.ListaProductoToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem2 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.PedidosToolStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
             this.ribbonControlAdv1.SuspendLayout();
             this.toolStripTabItem1.Panel.SuspendLayout();
-            this.toolStripEx1.SuspendLayout();
+            this.ProductosToolStripEx.SuspendLayout();
             this.toolStripTabItem2.Panel.SuspendLayout();
             this.toolStripEx2.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +72,7 @@ namespace ExamenII_EmanuelFerrera
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
             this.ribbonControlAdv1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2013;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem2;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem1;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(740, 105);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
@@ -89,7 +89,7 @@ namespace ExamenII_EmanuelFerrera
             // 
             // ribbonControlAdv1.ribbonPanel1
             // 
-            this.toolStripTabItem1.Panel.Controls.Add(this.toolStripEx1);
+            this.toolStripTabItem1.Panel.Controls.Add(this.ProductosToolStripEx);
             this.toolStripTabItem1.Panel.Name = "ribbonPanel1";
             this.toolStripTabItem1.Panel.ScrollPosition = 0;
             this.toolStripTabItem1.Panel.TabIndex = 2;
@@ -98,38 +98,39 @@ namespace ExamenII_EmanuelFerrera
             this.toolStripTabItem1.Size = new System.Drawing.Size(90, 25);
             this.toolStripTabItem1.Tag = "1";
             this.toolStripTabItem1.Text = "Productos";
-            this.toolStripTabItem1.Click += new System.EventHandler(this.toolStripTabItem1_Click);
+            this.toolStripTabItem1.Click += new System.EventHandler(this.ProductosToolStripTabItem_Click);
             // 
-            // toolStripEx1
+            // ProductosToolStripEx
             // 
-            this.toolStripEx1.AutoSize = false;
-            this.toolStripEx1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStripEx1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.toolStripEx1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.toolStripEx1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStripEx1.Image = global::ExamenII_EmanuelFerrera.Properties.Resources.Producto;
-            this.toolStripEx1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
-            this.toolStripEx1.Location = new System.Drawing.Point(0, 1);
-            this.toolStripEx1.Name = "toolStripEx1";
-            this.toolStripEx1.Office12Mode = false;
-            this.toolStripEx1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx1.Size = new System.Drawing.Size(134, 49);
-            this.toolStripEx1.TabIndex = 0;
-            this.toolStripEx1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStripEx1_ItemClicked);
+            this.ProductosToolStripEx.AutoSize = false;
+            this.ProductosToolStripEx.Dock = System.Windows.Forms.DockStyle.None;
+            this.ProductosToolStripEx.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.ProductosToolStripEx.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.ProductosToolStripEx.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.ProductosToolStripEx.Image = global::ExamenII_EmanuelFerrera.Properties.Resources.Producto;
+            this.ProductosToolStripEx.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ListaProductoToolStripButton});
+            this.ProductosToolStripEx.Location = new System.Drawing.Point(0, 1);
+            this.ProductosToolStripEx.Name = "ProductosToolStripEx";
+            this.ProductosToolStripEx.Office12Mode = false;
+            this.ProductosToolStripEx.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ProductosToolStripEx.Size = new System.Drawing.Size(158, 49);
+            this.ProductosToolStripEx.TabIndex = 0;
+            this.ProductosToolStripEx.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.ProductoToolStripEx_ItemClicked);
             // 
-            // toolStripButton1
+            // ListaProductoToolStripButton
             // 
-            this.toolStripButton1.BackColor = System.Drawing.Color.Gainsboro;
-            this.toolStripButton1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.ForeColor = System.Drawing.Color.Black;
-            this.toolStripButton1.Image = global::ExamenII_EmanuelFerrera.Properties.Resources.Producto;
-            this.toolStripButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(125, 32);
-            this.toolStripButton1.Text = "Lista de Productos";
-            this.toolStripButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ListaProductoToolStripButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.ListaProductoToolStripButton.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListaProductoToolStripButton.ForeColor = System.Drawing.Color.Black;
+            this.ListaProductoToolStripButton.Image = global::ExamenII_EmanuelFerrera.Properties.Resources.Producto;
+            this.ListaProductoToolStripButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ListaProductoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ListaProductoToolStripButton.Name = "ListaProductoToolStripButton";
+            this.ListaProductoToolStripButton.Size = new System.Drawing.Size(125, 32);
+            this.ListaProductoToolStripButton.Text = "Lista de Productos";
+            this.ListaProductoToolStripButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ListaProductoToolStripButton.Click += new System.EventHandler(this.ListaProductoToolStripButton_Click);
             // 
             // toolStripTabItem2
             // 
@@ -156,7 +157,7 @@ namespace ExamenII_EmanuelFerrera
             this.toolStripEx2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripEx2.Image = null;
             this.toolStripEx2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton2});
+            this.PedidosToolStripButton});
             this.toolStripEx2.Location = new System.Drawing.Point(0, 1);
             this.toolStripEx2.Name = "toolStripEx2";
             this.toolStripEx2.Office12Mode = false;
@@ -164,16 +165,17 @@ namespace ExamenII_EmanuelFerrera
             this.toolStripEx2.Size = new System.Drawing.Size(140, 49);
             this.toolStripEx2.TabIndex = 0;
             // 
-            // toolStripButton2
+            // PedidosToolStripButton
             // 
-            this.toolStripButton2.AutoSize = false;
-            this.toolStripButton2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton2.ForeColor = System.Drawing.Color.Black;
-            this.toolStripButton2.Image = global::ExamenII_EmanuelFerrera.Properties.Resources.Pedido;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(133, 32);
-            this.toolStripButton2.Text = "Pedidos de Clientes";
+            this.PedidosToolStripButton.AutoSize = false;
+            this.PedidosToolStripButton.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PedidosToolStripButton.ForeColor = System.Drawing.Color.Black;
+            this.PedidosToolStripButton.Image = global::ExamenII_EmanuelFerrera.Properties.Resources.Pedido;
+            this.PedidosToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PedidosToolStripButton.Name = "PedidosToolStripButton";
+            this.PedidosToolStripButton.Size = new System.Drawing.Size(133, 32);
+            this.PedidosToolStripButton.Text = "Pedidos de Clientes";
+            this.PedidosToolStripButton.Click += new System.EventHandler(this.PedidosToolStripButton_Click);
             // 
             // FrmMenu
             // 
@@ -186,15 +188,17 @@ namespace ExamenII_EmanuelFerrera
             this.Controls.Add(this.ribbonControlAdv1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMenu";
             this.Text = "FrmMenu";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).EndInit();
             this.ribbonControlAdv1.ResumeLayout(false);
             this.ribbonControlAdv1.PerformLayout();
             this.toolStripTabItem1.Panel.ResumeLayout(false);
-            this.toolStripEx1.ResumeLayout(false);
-            this.toolStripEx1.PerformLayout();
+            this.ProductosToolStripEx.ResumeLayout(false);
+            this.ProductosToolStripEx.PerformLayout();
             this.toolStripTabItem2.Panel.ResumeLayout(false);
             this.toolStripTabItem2.Panel.PerformLayout();
             this.toolStripEx2.ResumeLayout(false);
@@ -203,24 +207,33 @@ namespace ExamenII_EmanuelFerrera
 
         }
 
-        private void toolStripTabItem1_Click(object sender, EventArgs e)
+        private void PedidosToolStripButton_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
         }
 
-        private void toolStripEx1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
             throw new NotImplementedException();
         }
 
+        private void ProductoToolStripEx_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void ProductosToolStripTabItem_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
         #endregion
 
         private Syncfusion.Windows.Forms.Tools.RibbonControlAdv ribbonControlAdv1;
         private Syncfusion.Windows.Forms.Tools.ToolStripTabItem toolStripTabItem1;
         private Syncfusion.Windows.Forms.Tools.ToolStripTabItem toolStripTabItem2;
-        private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private Syncfusion.Windows.Forms.Tools.ToolStripEx ProductosToolStripEx;
+        private System.Windows.Forms.ToolStripButton ListaProductoToolStripButton;
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx2;
-        private ToolStripButton toolStripButton2;
+        private ToolStripButton PedidosToolStripButton;
     }
 }
