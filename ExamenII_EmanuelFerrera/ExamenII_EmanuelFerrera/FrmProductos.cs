@@ -38,7 +38,6 @@ namespace ExamenII_EmanuelFerrera
             NuevoButton.Enabled = false;
             ModificarButton.Enabled = false;
         }
-
         private void DesabilitarControles()
         {
             CodigoTextBox.Enabled = false;
@@ -94,7 +93,7 @@ namespace ExamenII_EmanuelFerrera
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
-                errorProvider1.SetError(PrecioTextBox, "Ingrese un caracter numerico");
+                errorProvider1.SetError(PrecioTextBox, "Ingrese un caracter numérico");
             }
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
@@ -120,7 +119,7 @@ namespace ExamenII_EmanuelFerrera
                 if (elimino)
                 {
                     ListarProductos();
-                    MessageBox.Show("El Producto fue Eliminado", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("El producto fue eliminado", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -129,7 +128,7 @@ namespace ExamenII_EmanuelFerrera
             }
             else
             {
-                MessageBox.Show("Seleccionar un Producto", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Seleccionar un producto", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

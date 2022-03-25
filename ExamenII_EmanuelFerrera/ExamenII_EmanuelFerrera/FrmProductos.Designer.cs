@@ -58,6 +58,7 @@ namespace ExamenII_EmanuelFerrera
             this.CodigoTextBox.Name = "CodigoTextBox";
             this.CodigoTextBox.Size = new System.Drawing.Size(174, 23);
             this.CodigoTextBox.TabIndex = 0;
+            this.CodigoTextBox.TextChanged += new System.EventHandler(this.CodigoTextBox_TextChanged);
             // 
             // label1
             // 
@@ -231,6 +232,11 @@ namespace ExamenII_EmanuelFerrera
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void CodigoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void ProductosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -1,4 +1,6 @@
-﻿namespace ExamenII_EmanuelFerrera
+﻿using System;
+
+namespace ExamenII_EmanuelFerrera
 {
     partial class FrmPedidos
     {
@@ -83,6 +85,7 @@
             this.CodigoTextBox.Name = "CodigoTextBox";
             this.CodigoTextBox.Size = new System.Drawing.Size(100, 23);
             this.CodigoTextBox.TabIndex = 2;
+            this.CodigoTextBox.TextChanged += new System.EventHandler(this.CodigoTextBox_TextChanged);
             // 
             // label2
             // 
@@ -231,6 +234,16 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void FrmPedidos_Load(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CodigoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

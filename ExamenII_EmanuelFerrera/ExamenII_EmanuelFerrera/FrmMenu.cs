@@ -22,12 +22,17 @@ namespace ExamenII_EmanuelFerrera
             {
                 frmProductos = new FrmProductos();
                 frmProductos.MdiParent = this;
+                frmProductos.FormClosed += FrmProducto_FormClosed;
                 frmProductos.Show();
             }
             else
             {
                 frmProductos.Activate();
             }
+        }
+        private void FrmProducto_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmProductos = null;
         }
     }
 }

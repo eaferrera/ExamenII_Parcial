@@ -33,7 +33,7 @@ namespace Datos.Accesos
                 reader.Close();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
             return lista;
@@ -111,7 +111,7 @@ namespace Datos.Accesos
                 elimino = true;
                 conn.Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
             return elimino;
@@ -145,6 +145,38 @@ namespace Datos.Accesos
             {
             }
             return producto;
+        }
+
+        public bool InsertarPedido(Pedido pedidos)
+        {
+            bool inserto = false;
+
+            try
+            {
+                string sql = "INSERT INTO pedido VALUES (@Codigo, @Cliente, @Cantidad, @Subtotal, @Impuesto, @Total);";
+
+                conn = new MySqlConnection(cadena);
+                conn.Open();
+
+                cmd = new MySqlCommand(sql, conn);
+
+                cmd.Parameters.AddWithValue("@Codigo", pedidos.Codigo);
+                cmd.Parameters.AddWithValue("@Cliente", pedidos.Cliente);
+                cmd.Parameters.AddWithValue("@Cantidad", pedidos.Cantidad);
+                cmd.Parameters.AddWithValue("@Subtotal", pedidos.SubTotal);
+                cmd.Parameters.AddWithValue("@Impuesto", pedidos.Impuesto);
+                cmd.Parameters.AddWithValue("@Total", pedidos.Total);
+
+                cmd.ExecuteNonQuery();
+                inserto = true;
+                conn.Close();
+
+            }
+            catch (Exception)
+            {
+
+            }
+            return inserto;
         }
     }
 }

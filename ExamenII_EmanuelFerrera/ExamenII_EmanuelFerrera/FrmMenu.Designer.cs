@@ -72,7 +72,7 @@ namespace ExamenII_EmanuelFerrera
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
             this.ribbonControlAdv1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2013;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem1;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem2;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(740, 105);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
@@ -144,6 +144,7 @@ namespace ExamenII_EmanuelFerrera
             this.toolStripTabItem2.Panel.ScrollPosition = 0;
             this.toolStripTabItem2.Panel.TabIndex = 3;
             this.toolStripTabItem2.Panel.Text = "Pedidos";
+            this.toolStripTabItem2.Panel.Click += new System.EventHandler(this.RibbonPanel_Click);
             this.toolStripTabItem2.Position = 1;
             this.toolStripTabItem2.Size = new System.Drawing.Size(78, 25);
             this.toolStripTabItem2.Tag = "2";
@@ -212,20 +213,6 @@ namespace ExamenII_EmanuelFerrera
             throw new NotImplementedException();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void ProductoToolStripEx_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void ProductosToolStripTabItem_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
         #endregion
 
         private Syncfusion.Windows.Forms.Tools.RibbonControlAdv ribbonControlAdv1;

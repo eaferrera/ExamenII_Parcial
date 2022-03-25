@@ -42,7 +42,7 @@ namespace Datos.Accesos
                 reader.Close();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
