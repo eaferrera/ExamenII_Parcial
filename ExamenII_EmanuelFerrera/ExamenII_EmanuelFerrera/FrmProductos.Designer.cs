@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace ExamenII_EmanuelFerrera
 {
@@ -30,6 +31,7 @@ namespace ExamenII_EmanuelFerrera
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.CodigoTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.NuevoButton = new System.Windows.Forms.Button();
@@ -44,7 +46,9 @@ namespace ExamenII_EmanuelFerrera
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.CancelarButton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ProductosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // CodigoTextBox
@@ -142,7 +146,7 @@ namespace ExamenII_EmanuelFerrera
             this.ProductosDataGridView.Name = "ProductosDataGridView";
             this.ProductosDataGridView.Size = new System.Drawing.Size(384, 116);
             this.ProductosDataGridView.TabIndex = 9;
-            this.ProductosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductoDataGridView_CellContentClick);
+            this.ProductosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductosDataGridView_CellContentClick);
             // 
             // ModificarButton
             // 
@@ -158,6 +162,7 @@ namespace ExamenII_EmanuelFerrera
             // 
             // GuardarButton
             // 
+            this.GuardarButton.Enabled = false;
             this.GuardarButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.GuardarButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GuardarButton.Location = new System.Drawing.Point(348, 116);
@@ -177,9 +182,11 @@ namespace ExamenII_EmanuelFerrera
             this.EliminarButton.TabIndex = 12;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // CancelarButton
             // 
+            this.CancelarButton.Enabled = false;
             this.CancelarButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.CancelarButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelarButton.Location = new System.Drawing.Point(348, 176);
@@ -188,6 +195,11 @@ namespace ExamenII_EmanuelFerrera
             this.CancelarButton.TabIndex = 13;
             this.CancelarButton.Text = "Cancelar";
             this.CancelarButton.UseVisualStyleBackColor = true;
+            this.CancelarButton.Click += new System.EventHandler(this.CancelarButton_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // FrmProductos
             // 
@@ -215,9 +227,15 @@ namespace ExamenII_EmanuelFerrera
             this.Text = "FrmProductos";
             this.Load += new System.EventHandler(this.FrmProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProductosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void ProductosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void FrmProductos_Load(object sender, EventArgs e)
@@ -241,5 +259,6 @@ namespace ExamenII_EmanuelFerrera
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.Button CancelarButton;
+        private ErrorProvider errorProvider1;
     }
 }
